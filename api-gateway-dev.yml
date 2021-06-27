@@ -45,14 +45,14 @@ spring:
      
    
     
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: '*'
-#    logfile:
-#    external-file: logs/logfile.log
-#        
-#logging:
-#  file:
-#    name: logs/logfile.log
+management:
+ endpoints:
+   web:
+     exposure:
+       include: '*'
+   logfile:
+   external-file: logs/logfile.log
+       
+logging:
+ file:
+   name: logs/logfile.log
