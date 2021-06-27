@@ -1,5 +1,5 @@
-server:
-  port: 8080
+# server:
+#   port: 8080
   
 eureka:
   client:
@@ -7,11 +7,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 spring:
-  application:
-    name: api-gateway
+#   application:
+#     name: api-gateway
   cloud:
-  discovery:
-  enabled: true
+#   discovery:
+#   enabled: true
     gateway:
       routes:        
       - id: bootClient1
@@ -21,15 +21,7 @@ spring:
       - id: bootClient2
         uri: lb://boot-client2/
         predicates:
-        - Path=/bootClient2/**        
-      - id: camelFile
-        uri: lb://camel-file/
-        predicates:
-        - Path=/camel-file/**         
-      - id: config-server
-        uri: lb://config-server/
-        predicates:
-        - Path=/config-server/**
+        - Path=/bootClient2/**  
     boot:
       admin:
         client:
