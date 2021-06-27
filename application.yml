@@ -1,2 +1,6 @@
 greeting: Hello from tcs poc application yaml
-spring.boot.admin.client.url=http://localhost:8761/admin
+spring:
+   boot:
+    admin:
+    client:
+     url: http://localhost:8761/admin
