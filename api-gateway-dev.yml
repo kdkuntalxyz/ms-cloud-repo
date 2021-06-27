@@ -1,5 +1,5 @@
-# server:
-#   port: 8080
+server:
+  port: 8080
   
 eureka:
   client:
@@ -7,8 +7,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 spring:
-#   application:
-#     name: api-gateway
+  application:
+#    name: tcs-poc-api-gateway
+    name: api-gateway
 #    config:
 #     import: optional:configserver:http://localhost:9004
   cloud:
@@ -40,46 +41,3 @@ spring:
     admin:
     client:
      url: http://localhost:8761/admin
-          
-     
-   
-management:
-  endpoints:
-    web:
-      exposure:
-        include: --- 
-eureka: 
-  client: 
-    serviceUrl: 
-      defaultZone: "http://localhost:8761/eureka/"
-logging: 
-  file: 
-    name: logs/logfile.log
-management: 
-  endpoint: 
-    logfile: 
-      external-file: logs/logfile.log
-  endpoints: 
-    web: 
-      exposure: 
-        include: "*"
-server: 
-  port: 8080
-spring: 
-  boot: 
-    admin: 
-      client: 
-        url: "http://localhost:8761/admin"
-
-  endpoint:
-    logfile:
-      external-file: logs/logfile.log
-logging:
-  file:
-    name: logs/logfile.log
-spring:
-  boot:
-    admin:
-      client:
-        url: http://localhost:8761/admin
-
