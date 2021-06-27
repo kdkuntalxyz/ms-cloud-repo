@@ -1,1 +1,4 @@
-greeting: Hello Cloud
+greeting: Hello from tcs poc application yaml
+spring:
+  profile:
+    active: dev
